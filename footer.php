@@ -153,10 +153,8 @@
     <!--Footer End-->
 
 </div>
-<script src="Js/jquery.min.js"></script>
-<script src="Js/bootstrap.min.js"></script>
-<script src="Js/my-script.js"></script>
-<script src="Js/owl.carousel.js"></script>
-<script src="Js/custom.js"></script>
+<?php
+wp_footer();
+    ?>
 </body>
 </html>

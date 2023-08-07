@@ -13,7 +13,7 @@
                 <div id="of-mobile-nav" class="mobile-menu-wrap">
                         <div class="d-block text-center my-3">
                             <a href="Index.html" class="current py-2">
-                                <img src="Img/logo.svg" />
+                                <img alt="Logo" src="<?php echo get_template_directory_uri()?>/Img/logo.svg"/>
                             </a>
                         </div> 
                     <ul class="mobile-menu">
@@ -52,7 +52,7 @@
                     <ul class="menu">
                         <li>
                             <a href="Index.html" class="current py-2">
-                                <img src="Img/logo.svg" />
+                                <img src="<?php echo get_template_directory_uri()?>/Img/logo.svg" />
                             </a>
                         </li>
                         <li><a href="Index.html" target="_blank">صفحه اصلی</a></li>
@@ -103,7 +103,7 @@
 
                 <div class="logo-mobile d-none">
                     <a href="Index.html" class="current py-2">
-                        <img src="Img/logo.svg" />
+                        <img src="<?php echo get_template_directory_uri()?>/Img/logo.svg" />
                     </a>
                 </div> 
 

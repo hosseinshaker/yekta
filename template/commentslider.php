@@ -12,7 +12,7 @@
                       <div id="owl-Story" class="owl-carousel owl-theme text-center py-2 px-md-3">
                           <div class="item">
                               <div class="d-flex card flex-row justify-content-center align-items-center text-right mt-3 p-6 commernt-res">
-                                  <img src="Img/profile.jpg" class="img-fluid pic155 p-1 rounded-circle ml-lg-5" />
+                                  <img src="<?php echo get_template_directory_uri()?>/Img/profile.jpg" class="img-fluid pic155 p-1 rounded-circle ml-lg-5" />
 
                                   <div class="m-2">
                                       <p> این یک نوشته آزمایشی است که به طراحان و برنامه نویسان کمک میکند تا این عزیزان با بهره گیری از این نوشته تستی و آزمایشی بتوانند نمونه تکمیل شده از پروژه و طرح خودشان را به کارفرما نمایش دهند.
@@ -49,7 +49,7 @@
 
                           <div class="item">
                             <div class="d-flex card flex-row justify-content-center align-items-center text-right mt-3 p-6 commernt-res">
-                                <img src="Img/profile-1.jpg" class="img-fluid pic155 p-1 rounded-circle ml-lg-5" />
+                                <img src="<?php echo get_template_directory_uri()?>/Img/profile-1.jpg" class="img-fluid pic155 p-1 rounded-circle ml-lg-5" />
 
                                 <div class="m-2">
                                     <p> این یک نوشته آزمایشی است که به طراحان و برنامه نویسان کمک میکند تا این عزیزان با بهره گیری از این نوشته تستی و آزمایشی بتوانند نمونه تکمیل شده از پروژه و طرح خودشان را به کارفرما نمایش دهند.

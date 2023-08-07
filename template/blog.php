@@ -21,7 +21,7 @@
                 <div class="col-lg-3 col-md-6 mb-4">
                     <div class="card p-3 mb-3 carding-blog overlyblog">
                         <a href="page-blog.html">
-                            <img src="Img/beautiful-pet-3.jpg" alt="Card image">
+                            <img src="<?php echo get_template_directory_uri()?>/Img/beautiful-pet-3.jpg" alt="Card image">
                         </a>
                         <div class="p_relative">
                             <h5 class="mt-5 YekanBakhFaNum-Bold"><a href="page-blog.html">بازی با حیوانات خانگی</a></h5>
@@ -57,7 +57,7 @@
                 <div class="col-lg-3 col-md-6 mb-4">
                     <div class="card p-3 mb-3 carding-blog overlyblog">
                         <a href="page-blog.html">
-                            <img src="Img/beautiful-pet-1.jpg" alt="Card image">
+                            <img src="<?php echo get_template_directory_uri()?>/Img/beautiful-pet-1.jpg" alt="Card image">
                         </a>
                         <div class="p_relative">
                             <h5 class="mt-5 YekanBakhFaNum-Bold"><a href="page-blog.html">تغذیه ی حیوانات خانگی</a></h5>
@@ -93,7 +93,7 @@
                 <div class="col-lg-3 col-md-6 mb-4">
                     <div class="card p-3 mb-3 carding-blog overlyblog">
                         <a href="page-blog.html">
-                            <img src="Img/beautiful-pet-2.jpg" alt="Card image">
+                            <img src="<?php echo get_template_directory_uri()?>/Img/beautiful-pet-2.jpg" alt="Card image">
                         </a>
                         <div class="p_relative">
                             <h5 class="mt-5 YekanBakhFaNum-Bold"><a href="page-blog.html">رفتار کودک با حیوان خانگی</a></h5>
@@ -129,7 +129,7 @@
                 <div class="col-lg-3 col-md-6 mb-4">
                     <div class="card p-3 mb-3 carding-blog overlyblog">
                         <a href="page-blog.html">
-                            <img src="Img/beautiful-pet-4.jpg" alt="Card image">
+                            <img src="<?php echo get_template_directory_uri()?>/Img/beautiful-pet-4.jpg" alt="Card image">
                         </a>
                         <div class="p_relative">
                             <h5 class="mt-5 YekanBakhFaNum-Bold"><a href="page-blog.html">تربیت حیوانات خانگی</a></h5>

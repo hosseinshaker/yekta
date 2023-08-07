@@ -141,7 +141,7 @@
                 </div>
         
                 <div class="text-left logo-footer">
-                     <img src="Img/footer-logo.svg" alt="">
+                     <img src="<?php echo get_template_directory_uri()?>/Img/footer-logo.svg" alt="">
                 </div>
         
         

@@ -21,7 +21,7 @@
                 <div class="item">
                     <div class="card-body mb-3 text-center">
                         <a href="page-shop.html">
-                            <img class="img-fluid" src="Img/product-4.jpg">
+                            <img class="img-fluid" src="<?php echo get_template_directory_uri()?>/Img/product-4.jpg">
                         </a>
                         <div>
                             <h5 class="my-2 YekanBakhFaNum-SemiBold"><a href="page-shop.html">غذای مخصوص سگ</a></h5>
@@ -53,7 +53,7 @@
                 <div class="item">
                     <div class="card-body mb-3 text-center">
                         <a href="page-shop.html">
-                            <img class="img-fluid" src="Img/product-1.jpg">
+                            <img class="img-fluid" src="<?php echo get_template_directory_uri()?>/Img/product-1.jpg">
                         </a>
                         <div>
                             <h5 class="my-2 YekanBakhFaNum-SemiBold"><a href="page-shop.html">غذای خشک تیدا</a></h5>
@@ -85,7 +85,7 @@
                 <div class="item">
                     <div class="card-body mb-3 text-center">
                         <a href="page-shop.html">
-                            <img class="img-fluid" src="Img/product-2.jpg">
+                            <img class="img-fluid" src="<?php echo get_template_directory_uri()?>/Img/product-2.jpg">
                         </a>
                         <div>
                             <h5 class="my-2 YekanBakhFaNum-SemiBold"><a href="page-shop.html">قلاده چرمی رنگی</a></h5>
@@ -117,7 +117,7 @@
                 <div class="item">
                     <div class="card-body mb-3 text-center">
                         <a href="page-shop.html">
-                            <img class="img-fluid" src="Img/product-3.jpg">
+                            <img class="img-fluid" src="<?php echo get_template_directory_uri()?>/Img/product-3.jpg">
                         </a>
                         <div>
                             <h5 class="my-2 YekanBakhFaNum-SemiBold"><a href="page-shop.html">کنسرو تیدا</a></h5>

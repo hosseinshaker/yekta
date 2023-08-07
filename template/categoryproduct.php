@@ -4,7 +4,7 @@
 
             <div class="col-md-4 p-3">
                 <div class="py-4 p-3 d-flex align-items-center justify-content-around algin text-lg-right text-md-center mb-3 service_style category-style radius30">
-                        <img src="Img/Asset2501.png">
+                        <img src="<?php echo get_template_directory_uri()?>/Img/Asset2501.png">
                         <h3 class="YekanBakhFaNum-Bold fa1-2">غذا و انواع کنسرو</h3>
                         <a href="shop.html">
                             <div class="arrow-box d-flex align-items-center justify-content-center">
@@ -19,7 +19,7 @@
 
             <div class="col-md-4 p-3">
                 <div class="py-4 p-3 d-flex align-items-center justify-content-around algin text-lg-right text-md-center mb-3 service_style category-style radius30">
-                        <img src="Img/Asset2500.png">
+                        <img src="<?php echo get_template_directory_uri()?>/Img/Asset2500.png">
                         <h3 class="YekanBakhFaNum-Bold fa1-2">لباس و اکسسوری</h3>
                         <a href="shop.html">
                             <div class="arrow-box d-flex align-items-center justify-content-center">
@@ -34,7 +34,7 @@
 
             <div class="col-md-4 p-3">
                 <div class="py-4 p-3 d-flex align-items-center justify-content-around algin text-lg-right text-md-center mb-3 service_style category-style radius30">
-                        <img src="Img/Asset2502.png">
+                        <img src="<?php echo get_template_directory_uri()?>/Img/Asset2502.png">
                         <h3 class="YekanBakhFaNum-Bold fa1-2">تجهیزات و اسباب بازی</h3>
                         <a href="shop.html">
                             <div class="arrow-box d-flex align-items-center justify-content-center">

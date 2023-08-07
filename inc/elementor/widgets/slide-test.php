@@ -18,7 +18,7 @@ class Elementor_Widget_Slider extends \Elementor\Widget_Base {
 	}
 
 	public function get_keywords() {
-
+        return [ 'gemplay' ];
 	}
 
 	protected function register_controls(){

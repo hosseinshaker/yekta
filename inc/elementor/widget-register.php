@@ -3,12 +3,12 @@ function register_yektaweb_widget( $widgets_manager ) {
 	  /*
   * Widgets
   */
-	require_once( __DIR__ . '/widgets/skill.php' );
+	require_once( __DIR__ . '/widgets/slider.php' );
   /*
   * Register
   */
 
-	$widgets_manager->register( new \Profile_Man_Skill() );
+	$widgets_manager->register( new \Yekta_Web_Slider() );
 }
 /*
 * Widget register

@@ -1,12 +1,10 @@
 <?php
-function register_hello_world_widget( $widgets_manager ) {
+function register_yektaweb_widget( $widgets_manager ) {
+    $dir_elementor=get_template_directory_uri().'/inc/elementor/';
 
-    require_once( __DIR__ . '/widgets/hello-world-widget-1.php' );
-    require_once( __DIR__ . '/widgets/hello-world-widget-2.php' );
-    
-    $widgets_manager->register( new \Elementor_Hello_World_Widget_1() );
-    $widgets_manager->register( new \Elementor_Hello_World_Widget_2() );
+    require_once( $dir_elementor . '/widgets/slider.php' );
+    $widgets_manager->register( new \Yekta_Web_Slider() );
     
     }
-    add_action( 'elementor/widgets/register', 'register_hello_world_widget' );
+    add_action( 'elementor/widgets/register', 'register_yektaweb_widget' );
     ?>

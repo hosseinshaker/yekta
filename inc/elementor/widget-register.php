@@ -4,10 +4,12 @@ function register_yektaweb_widget( $widgets_manager ) {
   * Widgets
   */
 	require_once( __DIR__ . '/widgets/slider.php' );
+	require_once( __DIR__ . '/widgets/box_category.php' );
   /*
   * Register
   */
 	$widgets_manager->register( new \Yekta_Web_Slider() );
+	$widgets_manager->register( new \Yekta_Web_box_category() );
 }
 /*
 * Widget register

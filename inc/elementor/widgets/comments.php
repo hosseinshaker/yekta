@@ -6,7 +6,7 @@ class Yekta_Web_Comments extends \Elementor\Widget_Base {
 	}
 
 	public function get_title() {
-		return esc_html__( 'انتخاب دسته/جعبه عکس', 'elementor-addon' );
+		return esc_html__( 'کامنت مشتری', 'elementor-addon');
 	}
 
 	public function get_icon() {

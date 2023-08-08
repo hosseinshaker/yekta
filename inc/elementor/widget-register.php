@@ -11,7 +11,7 @@ function register_yektaweb_widget( $widgets_manager ) {
   */
 	$widgets_manager->register( new \Yekta_Web_Slider() );
 	$widgets_manager->register( new \Yekta_Web_box_category() );
-	$widgets_manager->register( new \Yekta_Web_Comments() );
+	$widgets_manager->register( new Yekta_Web_Comments() );
 }
 /*
 * Widget register

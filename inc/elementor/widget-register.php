@@ -4,11 +4,14 @@ function register_yektaweb_widget( $widgets_manager ) {
   * Widgets
   */
 	require_once( __DIR__ . '/widgets/slider.php' );
+	require_once( __DIR__ . '/widgets/slide-test.php' );
   /*
   * Register
   */
 
 	$widgets_manager->register( new \Yekta_Web_Slider() );
+	$widgets_manager->register( new \Elementor_Widget_Slider() );
+
 }
 /*
 * Widget register

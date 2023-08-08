@@ -14,7 +14,7 @@ class Elementor_Widget_Slider extends \Elementor\Widget_Base {
 	}
 
 	public function get_categories() {
-		return [ 'gemplay' ];
+		return [ 'basic' ];
 	}
 
 	public function get_keywords() {

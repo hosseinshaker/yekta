@@ -42,19 +42,19 @@ class Yekta_Web_Comments extends \Elementor\Widget_Base {
 				'fields' => [
 					[
 						'name' => 'name_comment_yektaweb',
-						'label' => esc_html__( 'Title', 'textdomain' ),
+						'label' => esc_html__( 'نام مشتری', 'textdomain' ),
 						'type' => \Elementor\Controls_Manager::TEXT,
 						'default' => esc_html__( 'List Title' , 'textdomain' ),
 						'label_block' => true,
 					],
 					[
 						'name' => 'data_comment_yektaweb',
-						'label' => esc_html__( 'Content', 'textdomain' ),
+						'label' => esc_html__( 'متن کامنت', 'textdomain' ),
 						'type' => \Elementor\Controls_Manager::WYSIWYG,
 						'default' => esc_html__( 'List Content' , 'textdomain' ),
 						'show_label' => false,
 					],
-					[	'name' => 'name_comment_yektaweb',
+					[	'name' => 'image_comment_yektaweb',
 						'label' => esc_html__( 'انتخاب عکس اسلاید', 'textdomain' ),
 						'type' => \Elementor\Controls_Manager::MEDIA,
 						'default' => [
@@ -96,38 +96,82 @@ class Yekta_Web_Comments extends \Elementor\Widget_Base {
 		// Style Tab End
 
 	}
-
 	protected function render() {
 		$settings = $this->get_settings_for_display();
 		?>
+      
 
-       <!--Slider-->
-       <section class="container">
-        <div class="row">
 
-            <div class="col-lg-12 p-0 mb-3">
-                <div id="owl-mainslider" class="owl-carousel owl-theme text-center">
-<?php
-if ( $settings['slideryektaweb'] ) {
-	foreach (  $settings['slideryektaweb'] as $item ) {
-		//echo $item['link_slider'];
-		$image_slider=$item['image_slider_yektaweb']['url'];
+<!--Comment Slider-->
+<section class="bg-question pb-3">
+        <div class="m-3 question-bg">
+          <section class="container p-4 radius20 mt-5 mb-2">
+              <div class=" text-center mt-3">
+                <h2 class="mt-5">نظرات مشتریان</h2>
+                  <p class="mb-3">همواره در تلاشیم تا رضایت شمارو جلب کنیم،شما لایق بهترین ها هستید.</p>
+  
+              </div>
+                    <div class="mx-lg-5">
+                  <div>
+                      <div id="owl-Story" class="owl-carousel owl-theme text-center py-2 px-md-3">
+                         
+					  <?php
+$index=0;
+//var_dump($settings['slider_comment_yektaweb'][$index]['name_comment_yektaweb']);
+
+if ( $settings['slider_comment_yektaweb'] ) {
+	foreach (  $settings['slider_comment_yektaweb'] as $item ) {
+		echo $settings['slider_comment_yektaweb'][0]['name_comment_yektaweb'];
+		$image_slider=$item['image_comment_yektaweb']['url'];
 		echo '<div class="item"><a href="'.$item['link_slider'].'"> <img  class="img-fluid radius-slide" src="'.$image_slider.'"/></a></div>';
 	}
 }
 
 ?>
-                </div>
-            </div>
-        </div>
-    </section>
-       <!--End--Slider-->
+<!-- 
+                          <div class="item">
+                            <div class="d-flex card flex-row justify-content-center align-items-center text-right mt-3 p-6 commernt-res">
+                                <img src="777777777777777777" class="img-fluid pic155 p-1 rounded-circle ml-lg-5" />
+                                <div class="m-2">
+                                    <p> این یک نوشته آزمایشی است که به طراحان و برنامه نویسان
+                                    </p>
+                                    <div class="pt-2">
+                                        <p class="text-dark bottom_p">سامان نظری</p>
+                                        <span>
+
+                                          <svg width="15" height="14" viewBox="0 0 15 14" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                              <path d="M7.24563 10.8425L3.38813 12.8706L4.125 8.575L1 5.53313L5.3125 4.90813L7.24125 1L9.17 4.90813L13.4825 5.53313L10.3575 8.575L11.0944 12.8706L7.24563 10.8425Z" fill="#FDC736" stroke="#FDC736" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                                          </svg>
+                                           
+                                        </span>
+                                    </div>
+
+                                </div>
+
+                            </div>
+                        </div>   --> 
+						
+						
+
+
+
+                
+                      </div>
+                  </div>
+              </div>
+          </section>
+      </div>
+        </section>
+<!--End--Comment Slider-->
+
+
+
 
 
 		<?php
 	}
 
-	protected function content_template() {
+/* 	protected function content_template() {
 		?>
 		<# if ( settings.slideryektaweb.length ) { #>
 			<dl>
@@ -140,6 +184,6 @@ if ( $settings['slideryektaweb'] ) {
 			</dl>
 		<# } #>
 		<?php
-	}
+	} */
 
 }

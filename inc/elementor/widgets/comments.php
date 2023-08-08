@@ -6,7 +6,7 @@ class Yekta_Web_Comments extends \Elementor\Widget_Base {
 	}
 
 	public function get_title() {
-		return esc_html__( 'اسلایدر یکتاوب', 'elementor-addon' );
+		return esc_html__( 'کامنت های مشتریان', 'elementor-addon' );
 	}
 
 	public function get_icon() {
@@ -18,7 +18,7 @@ class Yekta_Web_Comments extends \Elementor\Widget_Base {
 	}
 
 	public function get_keywords() {
-		return [ 'اسلایدر', 'slider' ];
+		return [ 'کامنت', 'comment' ];
 	}
 
 	protected function register_controls() {
@@ -28,25 +28,33 @@ class Yekta_Web_Comments extends \Elementor\Widget_Base {
 		$this->start_controls_section(
 			'section_title',
 			[
-				'label' => esc_html__( 'اسلایدر یکتاوب', 'elementor-addon' ),
+				'label' => esc_html__( 'اسلایدر کامنت', 'elementor-addon' ),
 				'tab' => \Elementor\Controls_Manager::TAB_CONTENT,
 			]
 		);
 
 
 		$this->add_control(
-			'slideryektaweb',
+			'slider_comment_yektaweb',
 			[
-				'label' => esc_html__( 'اسلایدر یکتاوب', 'textdomain' ),
+				'label' => esc_html__( 'اسلاید کامنت', 'textdomain' ),
 				'type' => \Elementor\Controls_Manager::REPEATER,
 				'fields' => [
 					[
-						'name' => 'link_slider',
-						'label' => esc_html__( 'لینک اسلاید', 'textdomain' ),
+						'name' => 'name_comment_yektaweb',
+						'label' => esc_html__( 'Title', 'textdomain' ),
 						'type' => \Elementor\Controls_Manager::TEXT,
+						'default' => esc_html__( 'List Title' , 'textdomain' ),
 						'label_block' => true,
 					],
-					[	'name' => 'image_slider_yektaweb',
+					[
+						'name' => 'data_comment_yektaweb',
+						'label' => esc_html__( 'Content', 'textdomain' ),
+						'type' => \Elementor\Controls_Manager::WYSIWYG,
+						'default' => esc_html__( 'List Content' , 'textdomain' ),
+						'show_label' => false,
+					],
+					[	'name' => 'name_comment_yektaweb',
 						'label' => esc_html__( 'انتخاب عکس اسلاید', 'textdomain' ),
 						'type' => \Elementor\Controls_Manager::MEDIA,
 						'default' => [

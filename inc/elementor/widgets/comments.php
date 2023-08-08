@@ -1,8 +1,8 @@
 <?php
-class Yekta_Web_box_category extends \Elementor\Widget_Base {
+class Yekta_Web_Comments extends \Elementor\Widget_Base {
 
 	public function get_name() {
-		return 'Yekta_Web_box_category';
+		return 'Yekta_Web_Comments';
 	}
 
 	public function get_title() {

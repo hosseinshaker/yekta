@@ -47,6 +47,17 @@ class Yekta_Web_Comments extends \Elementor\Widget_Base {
 						'default' => esc_html__( 'List Title' , 'textdomain' ),
 						'label_block' => true,
 					],
+
+					[
+								'name'=>'star_comment_yektaweb',
+								'label' => esc_html__( 'تعداد ستاره', 'textdomain' ),
+								'type' => \Elementor\Controls_Manager::NUMBER,
+								'min' => 0,
+								'max' => 5,
+								'step' => 1,
+								'default' => 5,
+					],
+
 					[
 						'name' => 'data_comment_yektaweb',
 						'label' => esc_html__( 'متن کامنت', 'textdomain' ),
@@ -121,41 +132,50 @@ $index=0;
 
 if ( $settings['slider_comment_yektaweb'] ) {
 	foreach (  $settings['slider_comment_yektaweb'] as $item ) {
-		echo $settings['slider_comment_yektaweb'][0]['name_comment_yektaweb'];
-		$image_slider=$item['image_comment_yektaweb']['url'];
-		echo '<div class="item"><a href="'.$item['link_slider'].'"> <img  class="img-fluid radius-slide" src="'.$image_slider.'"/></a></div>';
+		
+
+?>
+
+<div class="item">
+         <div class="d-flex card flex-row justify-content-center align-items-center text-right mt-3 p-6 commernt-res">
+			
+
+
+
+             <img src="<?php echo $image_slider=$item['image_comment_yektaweb']['url']; ?>" class="img-fluid pic155 p-1 rounded-circle ml-lg-5" />
+
+
+
+               <div class="m-2">
+
+			   <?php echo $item['data_comment_yektaweb']; ?>
+                
+                    <div class="pt-2">
+                       <p class="text-dark bottom_p"><?php echo $item['name_comment_yektaweb']; ?></p>
+					   <?php
+					   $star_comment_count=$item['star_comment_yektaweb'];
+					 
+	
+for ($i =0; $i <= $star_comment_count; $i++) {
+    echo '   <span>
+	<svg width="15" height="14" viewBox="0 0 15 14" fill="none" xmlns="http://www.w3.org/2000/svg">
+		<path d="M7.24563 10.8425L3.38813 12.8706L4.125 8.575L1 5.53313L5.3125 4.90813L7.24125 1L9.17 4.90813L13.4825 5.53313L10.3575 8.575L11.0944 12.8706L7.24563 10.8425Z" fill="#FDC736" stroke="#FDC736" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>   
+   </span> ';
+}
+?>
+                        
+                    </div>
+                      </div>
+					</div>
+				</div>  
+
+
+<?php
 	}
 }
 
 ?>
-<!-- 
-                          <div class="item">
-                            <div class="d-flex card flex-row justify-content-center align-items-center text-right mt-3 p-6 commernt-res">
-                                <img src="777777777777777777" class="img-fluid pic155 p-1 rounded-circle ml-lg-5" />
-                                <div class="m-2">
-                                    <p> این یک نوشته آزمایشی است که به طراحان و برنامه نویسان
-                                    </p>
-                                    <div class="pt-2">
-                                        <p class="text-dark bottom_p">سامان نظری</p>
-                                        <span>
 
-                                          <svg width="15" height="14" viewBox="0 0 15 14" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                              <path d="M7.24563 10.8425L3.38813 12.8706L4.125 8.575L1 5.53313L5.3125 4.90813L7.24125 1L9.17 4.90813L13.4825 5.53313L10.3575 8.575L11.0944 12.8706L7.24563 10.8425Z" fill="#FDC736" stroke="#FDC736" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-                                          </svg>
-                                           
-                                        </span>
-                                    </div>
-
-                                </div>
-
-                            </div>
-                        </div>   --> 
-						
-						
-
-
-
-                
                       </div>
                   </div>
               </div>

@@ -9,3 +9,6 @@ Text domain: YektaProduct
 License: GNU General Public License version 3.0
 Tags: Shop,blog,office
 */
+.of-main-menu ul li{
+    float: none!important;
+}

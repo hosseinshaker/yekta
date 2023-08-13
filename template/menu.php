@@ -16,26 +16,20 @@
                                 <img alt="Logo" src="<?php echo get_template_directory_uri()?>/Img/logo.svg"/>
                             </a>
                         </div> 
-                    <ul class="mobile-menu">
-                        <li class="current-menu-item">
-                            <a href="Index.html">صفحه اصلی</a>
-                        </li>
-                        <li class="current-menu-item">
-                            <a href="shop.html">محصولات</a>
-                        </li>
-                        <li class="current-menu-item">
-                            <a href="gallery.html">گالری</a>
-                        </li>
-                        <li class="current-menu-item">
-                            <a href="blog.html">وبلاگ</a>
-                        </li>
-                        <li class="current-menu-item">
-                            <a href="about-us.html">درباره ما</a>
-                        </li>      
-                        <li class="current-menu-item">
-                            <a href="contact-us.html">تماس با ما</a>
-                        </li>
-                    </ul>
+
+
+
+                        <?php
+$args2 = array(
+    'theme_location' => 'mobile-menu',
+    'container' => 'span',
+    'container_class' => 'main-menu',
+    'menu_class' => 'mobile-menu',
+    'fallback_cb' => false,
+);
+// Output the main navigation menu
+wp_nav_menu($args2);
+                        ?>
                 </div>
             </div>
         </div>
@@ -49,28 +43,36 @@
             <div class="container p_relative h86">
 
                 <div id="navigation" class="of-drop-down of-main-menu" role="navigation">
-                    <ul class="menu">
+
+
+                <ul class="menu">
                         <li>
                             <a href="Index.html" class="current py-2">
                                 <img src="<?php echo get_template_directory_uri()?>/Img/logo.svg" />
                             </a>
                         </li>
-                        <li><a href="Index.html" target="_blank">صفحه اصلی</a></li>
+        
 
-                        <li><a href="shop.html" target="_blank">محصولات</a></li>
-
-                        <li><a href="gallery.html" target="_blank">گالری</a></li>
-
-                        <li><a href="blog.html" target="_blank">وبلاگ</a></li>
-                
-                        <li><a href="about-us.html" target="_blank">درباره ما</a></li>
-                        <li><a href="contact-us.html" target="_blank">تماس با ما</a></li>
                     </ul>
+
+
+                <?php
+$args = array(
+    'theme_location' => 'desktop-menu',
+    'container' => 'span',
+    'container_class' => 'main-menu',
+    'menu_class' => 'menu',
+    'fallback_cb' => false,
+);
+// Output the main navigation menu
+wp_nav_menu($args);
+                        ?>
+          
                 </div>
 
                 <div class="m_login d-flex">
                     <div class="shoping-cart radius30">
-                        <a href="cart.html">
+                        <a href="<?php  bloginfo('url'); ?>/wp-login.php">
                         <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
                             <path d="M2 2H3.74001C4.82001 2 5.67 2.93 5.58 4L4.75 13.96C4.61 15.59 5.89999 16.99 7.53999 16.99H18.19C19.63 16.99 20.89 15.81 21 14.38L21.54 6.88C21.66 5.22 20.4 3.87 18.73 3.87H5.82001" stroke="#222221" stroke-width="1.5" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/>
                             <path d="M16.25 22C16.9404 22 17.5 21.4404 17.5 20.75C17.5 20.0596 16.9404 19.5 16.25 19.5C15.5596 19.5 15 20.0596 15 20.75C15 21.4404 15.5596 22 16.25 22Z" stroke="#222221" stroke-width="1.5" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/>
@@ -86,7 +88,20 @@
                                 <path d="M12.1601 10.87C12.0601 10.86 11.9401 10.86 11.8301 10.87C9.4501 10.79 7.5601 8.84 7.5601 6.44C7.5501 3.99 9.5401 2 11.9901 2C14.4401 2 16.4301 3.99 16.4301 6.44C16.4301 8.84 14.5301 10.79 12.1601 10.87Z" stroke="white" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
                                 <path d="M11.99 21.8099C10.17 21.8099 8.36004 21.3499 6.98004 20.4299C4.56004 18.8099 4.56004 16.1699 6.98004 14.5599C9.73004 12.7199 14.24 12.7199 16.99 14.5599" stroke="white" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
                             </svg>    
-                            <a class="mr-2" href="login.html">ثبت نام | ورود</a>
+         <?php
+
+if ( is_user_logged_in() ) {
+    $current_user = wp_get_current_user();
+    $message = 'خوش آمدی ' . $current_user->display_name;
+} else {
+    $message = ' <a class="mr-2" href="'.get_site_url().' /wp-login.php">ثبت نام | ورود</a>';
+}
+echo $message;
+                 
+          ?>
+
+
+                           
                         </div>
                 </div>
 

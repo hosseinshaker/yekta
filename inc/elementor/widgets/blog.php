@@ -45,6 +45,51 @@ class Yekta_Web_Blog extends \Elementor\Widget_Base {
 				'default' => 4,
 			]
 		);
+	
+
+
+		$this->add_control(
+			'Description',
+			[
+				'label' => esc_html__( 'توضیحات', 'textdomain' ),
+				'type' => \Elementor\Controls_Manager::TEXT,
+				'default' => esc_html__( 'آخرین مقالات ما', 'textdomain' ),
+				'placeholder' => esc_html__( 'Type your title here', 'textdomain' ),
+			]
+		);
+
+
+		$this->add_control(
+			'link_archive_description',
+			[
+				'label' => esc_html__( 'لینک آرشیو مقالات', 'textdomain' ),
+				'type' => \Elementor\Controls_Manager::URL,
+				'options' => [ 'url', 'is_external', 'nofollow' ],
+				'default' => [
+					'url' => '',
+					'is_external' => true,
+					'nofollow' => true,
+					// 'custom_attributes' => '',
+				],
+				'label_block' => true,
+			]
+		);
+
+
+		$this->add_control(
+			'image_sized_blog',
+			[
+				'label' => esc_html__( 'تصاویر برابر', 'textdomain' ),
+				'type' => \Elementor\Controls_Manager::SELECT,
+				'default' => 'no',
+				'options' => [
+					'no' => esc_html__( 'خیر', 'textdomain' ),
+					'yes' => esc_html__( 'بله', 'textdomain' ),
+				]				
+			]
+		);
+
+
 
 
 		$this->end_controls_section();
@@ -81,14 +126,17 @@ class Yekta_Web_Blog extends \Elementor\Widget_Base {
 	protected function render() {
 		$settings = $this->get_settings_for_display();
       $count_nums_post=$settings['nummber_posts'];
+      $Description_post=$settings['Description'];
+      $link_archive_post=$settings['link_archive_description']['url'];
+      $image_sized_blog=$settings['image_sized_blog'];
 		?>
 <!--Blog-->
 <section class="container my-5">
     <div class="row">
         <div class="col-lg-12">
             <div class="d-flex align-items-center justify-content-between mt-4">
-                <h2>وبلاگ ما</h2>                    
-                <a class="d-flex align-items-center a-button radius55 py-2 px-4" href="blog.html">
+                <h2>وبلاگ</h2>                    
+                <a class="d-flex align-items-center a-button radius55 py-2 px-4" href="<?php echo $link_archive_post; ?>">
                     <span class="ml-2">همه مقالات</span>
                     <svg width="12" height="11" viewBox="0 0 12 11" fill="none" xmlns="http://www.w3.org/2000/svg">
                         <path d="M10.8019 6.17453H2.56566C2.00285 6.17453 1.53613 5.70782 1.53613 5.14501C1.53613 4.5822 2.00285 4.11548 2.56566 4.11548H10.8019C11.3647 4.11548 11.8314 4.5822 11.8314 5.14501C11.8314 5.70782 11.3647 6.17453 10.8019 6.17453Z" fill="#fff"/>
@@ -98,8 +146,8 @@ class Yekta_Web_Blog extends \Elementor\Widget_Base {
                 </a>
             </div>
             <p class="mb-5">
-                کلی نکات آموزشی درباره نحوه نگهداری از پت های دوست داشتنی شما
-            </p>
+			<?php echo $Description_post; ?>
+		</p>
             <div class="row">
 
               
@@ -120,7 +168,9 @@ if ( $query->have_posts() ) {
             <div class="col-lg-3 col-md-6 mb-4">
                     <div class="card p-3 mb-3 carding-blog overlyblog">
                         <a href="<?php the_permalink('small');?>">
-                            <img src="<?php echo get_the_post_thumbnail_url();  ?>" alt="Card image">
+   <img src="<?php echo get_the_post_thumbnail_url();  ?>" alt="Card image" class="<?php if($image_sized_blog=='yes'){
+								echo 'image-blog'; 
+							} ?>">
                         </a>
                         <div class="p_relative">
                             <h5 class="mt-5 YekanBakhFaNum-Bold"><a href="<?php the_permalink();?>"><?php the_title();?></a></h5>
@@ -157,7 +207,7 @@ if ( $query->have_posts() ) {
     }
 } else {
     // در صورتی که پستی یافت نشود، پیامی نمایش داده شود
-    echo 'No posts found.';
+    echo 'مطلبی یافت نشد.';
 }
 
 // بازگرداندن متغیرهای global به حالت پیش‌فرض

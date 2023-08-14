@@ -12,3 +12,7 @@ Tags: Shop,blog,office
 .of-main-menu ul li{
     float: none!important;
 }
+.image-blog{
+    width: 100%!important;
+    height: 150px!important;
+}

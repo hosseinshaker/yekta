@@ -170,7 +170,7 @@ if ( $query->have_posts() ) {
                         <a href="<?php the_permalink('small');?>">
    <img src="<?php echo get_the_post_thumbnail_url();  ?>" alt="Card image" class="<?php if($image_sized_blog=='yes'){
 								echo 'image-blog'; 
-							} ?>">
+							} ?>" style="border-radius:15px 15px 0px 0px;">
                         </a>
                         <div class="p_relative">
                             <h5 class="mt-5 YekanBakhFaNum-Bold"><a href="<?php the_permalink();?>"><?php the_title();?></a></h5>

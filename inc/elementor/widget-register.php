@@ -6,12 +6,14 @@ function register_yektaweb_widget( $widgets_manager ) {
 	require_once( __DIR__ . '/widgets/slider.php' );
 	require_once( __DIR__ . '/widgets/box_category.php' );
 	require_once( __DIR__ . '/widgets/comments.php' );
+	require_once( __DIR__ . '/widgets/blog.php' );
   /*
   * Register
   */
 	$widgets_manager->register( new \Yekta_Web_Slider() );
 	$widgets_manager->register( new \Yekta_Web_box_category() );
 	$widgets_manager->register( new \Yekta_Web_Comments() );
+	$widgets_manager->register( new \Yekta_Web_Blog() );
 }
 /*
 * Widget register

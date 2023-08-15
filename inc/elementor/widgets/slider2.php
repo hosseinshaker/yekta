@@ -90,16 +90,17 @@ if ( $settings['slideryektaweb2'] ) {
 		//echo $item['link_slider'];
 		$image_slider=$item['image_slider_yektaweb2']['url'];
 
-        echo '<div><img src="'.$image_slider.'" alt="تصویر ۱"></div>';
+        echo '<div><img src="'.$image_slider.'" class="image-slider-yekta"></div>';
 
 	}
 }
 
 ?>
                 </div>
-<nav>
+
     
-</nav>>
+</nav>
+</nav>
        <!--End--Slider-->
 
 
@@ -108,23 +109,23 @@ if ( $settings['slideryektaweb2'] ) {
 
 	protected function content_template() {
 		?>
- <section class="container">
-        <div class="row">
-
-            <div class="col-lg-12 p-0 mb-3">
-                <div id="owl-mainslider" class="owl-carousel owl-theme text-center">
-<# if ( settings.slideryektaweb.length ) { #>
-      
-        <# _.each( settings.slideryektaweb, function( item ) { #>
-			<img src="{{{ item.image_slider_yektaweb.url }}}">
+    <nav class="row">
+        <nav class="container">
+       <!--Slider-->
+   
+<# if ( settings.slideryektaweb2.length ) { #>
+    <div class="slider-yektaweb">
+        <# _.each( settings.slideryektaweb2, function( item ) { #>
+			<div><img class="image-slider-yekta" src="{{{ item.image_slider_yektaweb2.url }}}"></div>
         <# }); #>
-
+        </div>
 <# } #>
 
-</div>
-            </div>
-        </div>
-    </section>
+
+    
+</nav>
+</nav>
+       <!--End--Slider-->
 		<?php
 	}
 

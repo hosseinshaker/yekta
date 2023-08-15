@@ -266,10 +266,15 @@ $(document).ready(function () {
 
 
 //slider yekta-web
-jQuery(document).ready(function(){
-            jQuery('.slider-yektaweb').slick({
-                autoplay: true,
-                arrows: false,
-                draggable: true,
-            });
-        });
+window.onload = function() {
+  jQuery('.slider-yektaweb').slick({
+    infinite: true,
+    speed: 300,
+    slidesToShow: 1,
+    prevArrow: false,
+    nextArrow: false,
+    adaptiveHeight: true,
+    rtl: true
+  });
+};
+		

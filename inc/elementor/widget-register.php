@@ -4,6 +4,7 @@ function register_yektaweb_widget( $widgets_manager ) {
   * Widgets
   */
 	require_once( __DIR__ . '/widgets/slider.php' );
+	require_once( __DIR__ . '/widgets/slider2.php' );
 	require_once( __DIR__ . '/widgets/box_category.php' );
 	require_once( __DIR__ . '/widgets/comments.php' );
 	require_once( __DIR__ . '/widgets/blog.php' );
@@ -11,6 +12,7 @@ function register_yektaweb_widget( $widgets_manager ) {
   * Register
   */
 	$widgets_manager->register( new \Yekta_Web_Slider() );
+	$widgets_manager->register( new \Yekta_Web_Slider2() );
 	$widgets_manager->register( new \Yekta_Web_box_category() );
 	$widgets_manager->register( new \Yekta_Web_Comments() );
 	$widgets_manager->register( new \Yekta_Web_Blog() );

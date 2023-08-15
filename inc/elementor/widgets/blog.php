@@ -167,7 +167,7 @@ if ( $query->have_posts() ) {
         ?>
             <div class="col-lg-3 col-md-6 mb-4">
                     <div class="card p-3 mb-3 carding-blog overlyblog">
-                        <a href="<?php the_permalink('small');?>">
+                        <a href="<?php the_permalink();?>">
    <img src="<?php echo get_the_post_thumbnail_url();  ?>" alt="Card image" class="<?php if($image_sized_blog=='yes'){
 								echo 'image-blog'; 
 							} ?>" style="border-radius:15px 15px 0px 0px;">

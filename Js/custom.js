@@ -261,3 +261,15 @@ $(document).ready(function () {
     owlproduct_page();
 
 });
+
+
+
+
+//slider yekta-web
+jQuery(document).ready(function(){
+            jQuery('.slider-yektaweb').slick({
+                autoplay: true,
+                arrows: false,
+                draggable: true,
+            });
+        });

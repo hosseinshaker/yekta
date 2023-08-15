@@ -1,12 +1,12 @@
 <?php
-class Yekta_Web_Slider extends \Elementor\Widget_Base {
+class Yekta_Web_Slider2 extends \Elementor\Widget_Base {
 
 	public function get_name() {
-		return 'Yekta_Web_Slider';
+		return 'Yekta_Web_Slider2';
 	}
 
 	public function get_title() {
-		return esc_html__( 'اسلایدر یکتاوب', 'elementor-addon' );
+		return esc_html__( '2 اسلایدر یکتاوب', 'elementor-addon' );
 	}
 
 	public function get_icon() {
@@ -28,25 +28,25 @@ class Yekta_Web_Slider extends \Elementor\Widget_Base {
 		$this->start_controls_section(
 			'section_title',
 			[
-				'label' => esc_html__( 'اسلایدر یکتاوب', 'elementor-addon' ),
+				'label' => esc_html__( 'اسلایدر یکتاوب2', 'elementor-addon' ),
 				'tab' => \Elementor\Controls_Manager::TAB_CONTENT,
 			]
 		);
 
 
 		$this->add_control(
-			'slideryektaweb',
+			'slideryektaweb2',
 			[
-				'label' => esc_html__( 'اسلایدر یکتاوب', 'textdomain' ),
+				'label' => esc_html__( 'اسلایدر یکتاوب2', 'textdomain' ),
 				'type' => \Elementor\Controls_Manager::REPEATER,
 				'fields' => [
 					[
-						'name' => 'link_slider',
+						'name' => 'link_slider2',
 						'label' => esc_html__( 'لینک اسلاید', 'textdomain' ),
 						'type' => \Elementor\Controls_Manager::TEXT,
 						'label_block' => true,
 					],
-					[	'name' => 'image_slider_yektaweb',
+					[	'name' => 'image_slider_yektaweb2',
 						'label' => esc_html__( 'انتخاب عکس اسلاید', 'textdomain' ),
 						'type' => \Elementor\Controls_Manager::MEDIA,
 						'default' => [
@@ -71,18 +71,6 @@ class Yekta_Web_Slider extends \Elementor\Widget_Base {
 				'tab' => \Elementor\Controls_Manager::TAB_STYLE,
 			]
 		);
-
-		$this->add_control(
-			'title_color',
-			[
-				'label' => esc_html__( 'Text Color', 'elementor-addon' ),
-				'type' => \Elementor\Controls_Manager::COLOR,
-				'selectors' => [
-					'{{WRAPPER}} .hello-world' => 'color: {{VALUE}};',
-				],
-			]
-		);
-
 		$this->end_controls_section();
 
 		// Style Tab End
@@ -94,25 +82,20 @@ class Yekta_Web_Slider extends \Elementor\Widget_Base {
 		?>
 
        <!--Slider-->
-       <section class="container">
-        <div class="row">
-
-            <div class="col-lg-12 p-0 mb-3">
-                <div id="owl-mainslider" class="owl-carousel owl-theme text-center">
+       <div class="slider-yektaweb">
 <?php
-if ( $settings['slideryektaweb'] ) {
-	foreach (  $settings['slideryektaweb'] as $item ) {
+if ( $settings['slideryektaweb2'] ) {
+	foreach (  $settings['slideryektaweb2'] as $item ) {
 		//echo $item['link_slider'];
-		$image_slider=$item['image_slider_yektaweb']['url'];
-		echo '<div class="item"><a href="'.$item['link_slider'].'"> <img  class="img-fluid radius-slide" src="'.$image_slider.'"/></a></div>';
+		$image_slider=$item['image_slider_yektaweb2']['url'];
+
+        echo '<div><img src="'.$image_slider.'" alt="تصویر ۱"></div>';
+
 	}
 }
 
 ?>
                 </div>
-            </div>
-        </div>
-    </section>
        <!--End--Slider-->
 
 

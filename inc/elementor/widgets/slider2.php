@@ -80,7 +80,8 @@ class Yekta_Web_Slider2 extends \Elementor\Widget_Base {
 	protected function render() {
 		$settings = $this->get_settings_for_display();
 		?>
-
+        <nav class="row">
+        <nav class="container">
        <!--Slider-->
        <div class="slider-yektaweb">
 <?php
@@ -96,6 +97,9 @@ if ( $settings['slideryektaweb2'] ) {
 
 ?>
                 </div>
+<nav>
+    
+</nav>>
        <!--End--Slider-->
 
 
